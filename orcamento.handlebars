@@ -1,0 +1,65 @@
+ <h1>Solicitar Orçamento</h1>
+  <form action="/orcamento" id="form" method="post" class="text-center p-2">
+    <!-- Informações do Cliente -->
+    <fieldset>
+      <legend>Informações do Cliente:</legend>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required placeholder="Informe Seu Nome Completo">
+      
+      <label for="email">Endereço de E-mail:</label>
+      <input type="email" id="email" name="email" required placeholder="Ex: seu_email@.com.br">
+      
+      <label for="telefone">Número de Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required placeholder="EX: (00) 90000-0000" maxlength="15"><br><br>
+    </fieldset>
+    
+    <!-- Detalhes da Mudança -->
+    <fieldset>
+      <legend>Detalhes da Mudança:</legend>
+      <label for="tipo_servico">Tipo de Serviço:</label>
+      <select id="tipo_servico" name="tipo_servico" required>
+        <option value="comercial">Mudança Comercial</option>
+        <option value="entrega1">Entrega Comercial</option>
+        <option value="residencial">Mudança Residencial (Casa)</option>
+        <option value="residencial1">Mudança Residencial (Apartamento)</option>
+        <option value="entrega">Entrega Residencial (Casa)</option>
+        <option value="entrega">Entrega Residencial (Apartamento)</option>
+        <option value="outro">Outro</option>
+      </select>
+      
+      <label for="data_mudanca">Data Prevista para a Mudança:</label>
+      <input type="date" id="data_mudanca" name="data_mudanca" required>
+      
+      <label for="cep_origem">CEP Origem:</label>
+      <input type="text" id="cep_origem" name="cep_origem" required placeholder="Digite o CEP da Origem Ex: 00.000-000" maxlength="10">
+      
+      <label for="origem">Origem (Endereço de Partida):</label>
+      <input type="text" id="origem" name="origem" required placeholder="De Onde?">
+      <label for="complemento">Complemento:</label>
+      <input type="text" id="complemento" name="complemento" required placeholder="E.: Casa, Apartamento, Térrea, Subsolo, etc">
+      <label for="referencia">Ponto de Referência:</label>
+      <input type="text" id="referencia" name="referencia" required placeholder="Ex.: Ao lado do Supermercado Atacarejo">
+      
+      <label for="cep_destino">CEP Destino:</label>
+      <input type="text" id="cep_destino" name="cep_destino" required placeholder="Digite o CEP do Destino Ex: 00.000-000" maxlength="10">
+      
+      <label for="destino">Destino (Endereço de Destino):</label>
+      <input type="text" id="destino" name="destino" required placeholder="Para Onde?">
+      <label for="complemento">Complemento:</label>
+      <input type="text" id="complemento" name="complemento" required placeholder="E.: Casa, Apartamento, Térrea, Subsolo, etc">
+      <label for="referencia">Ponto de Referência:</label>
+      <input type="text" id="referencia" name="referencia" required placeholder="Ex.: Ao lado do Supermercado Assaí">
+      
+      <label for="lista_itens">Lista de Itens para Transporte (Opcional):</label>
+      <textarea id="lista_itens" name="lista_itens" rows="4" cols="50"></textarea>
+    </fieldset>
+    
+    <!-- Outras Informações -->
+    <fieldset>
+      <legend>Outras Informações:</legend>
+      <label for="info_adicionais">Informações Adicionais / Requisitos Especiais (Opcional):</label>
+      <textarea id="info_adicionais" name="info_adicionais" rows="4" cols="50"></textarea>
+    </fieldset>
+    
+    <input type="submit" value="Enviar Solicitação">
+  </form>

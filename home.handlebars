@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raylog - Avaliações dos Clientes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Fonte padrão */
+            color: #333; /* Cor do texto padrão */
+        }
+
+        h1, h2, h5 {
+            font-family: 'Arial', sans-serif; /* Fonte dos títulos */
+        }
+
+        .carousel-image {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel-caption .caption-background {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .carousel-caption h5, .carousel-caption p {
+            color: black;
+        }
+
+        .highlighted {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .whatsapp-button {
+           position: absolute;
+    top: 20px; /* Ajusta a distância do topo da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar horizontalmente */
+    background-color: rgba(37, 211, 102, 0.8); /* Cor com transparência para não sobrepor a imagem completamente */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10; /* Garante que o botão fique sobre a imagem */
+    white-space: nowrap; /* Garante que o texto do botão não quebre em várias linhas */
+        }
+
+        .whatsapp-button:hover {
+            transform: translateX(-50%) scale(1.1); /* Mantém a centralização ao aumentar o tamanho */
+    background-color: rgba(37, 211, 102, 1); /* Intensifica a cor ao passar o mouse */
+            }
+        
+
+        .avaliacoes {
+            margin-top: 20px;
+        }
+
+        .avaliacao-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .avaliacao-item strong {
+            color: #007bff;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #333; /* Cor dos ícones de controle do carrossel */
+        }
+
+        .text-outline {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center text-outline">RAYLOG - SUA TRANSPORTADORA DE CONFIANÇA</h1>
+    <br>
+    <h2 class="text-center text-outline">Bem-vindo à Raylog: sua parceira confiável em transporte e mudança</h2>
+    <br>
+
+    <!-- Bootstrap Carrossel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/IMG/imag.jpg" class="d-block w-100 carousel-image" alt="Imagem 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="caption-background">
+                        <h5 class="text-outline">Excelência em Transporte</h5>
+                        <p class="text-outline">Garantimos que seus pertences cheguem ao seu destino com segurança e pontualidade.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="/IMG/imgRaylog.png" class="d-block w-100 carousel-image" alt="Imagem 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="caption-background">
+                        <h5 class="text-outline">Serviços de Transporte Versáteis</h5>
+                        <p class="text-outline">Para empresas, oferecemos soluções personalizadas de logística e transporte.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/IMG/imgRaylog.jfif" class="d-block w-100 carousel-image" alt="Imagem 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="caption-background">
+                        <h5 class="text-outline">Soluções Personalizadas de Logística</h5>
+                        <p class="text-outline">Para empresas, oferecemos soluções personalizadas de logística e transporte, adaptadas às necessidades específicas do seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Bootstrap Carrossel Fim -->
+
+    <div class="text-center mt-5">
+        <h5 class="text-outline">Compromisso com a Satisfação do Cliente</h5>
+        <p class="text-outline">Na Raylog, não se trata apenas de transporte, mas sim de cuidado, confiança e compromisso com a satisfação do cliente. Entre em contato conosco hoje mesmo para descobrir como podemos tornar sua próxima entrega ou mudança uma experiência tranquila e sem complicações.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="/IMG/comp.avif" alt="Imagem 3">
+        <a href="https://wa.me/5571988765044" target="_blank" class="whatsapp-button">
+            Entrar em Contato via WhatsApp
+        </a>
+    </div>
+
+    <div class="avaliacoes container">
+        <ul id="avaliacoes-data" style="display: none;" data-avaliacoes="{{avaliacoes}}"></ul>
+        <div id="avaliacoes-container"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const avaliacoesData = document.getElementById('avaliacoes-data').getAttribute('data-avaliacoes');
+            const avaliacoes = JSON.parse(avaliacoesData);
+
+            const container = document.getElementById('avaliacoes-container');
+            
+            avaliacoes.forEach(avaliacao => {
+                const elemento = document.createElement('div');
+                const stars = Array(avaliacao.avaliacao).fill('★').join('');
+                const emptyStars = Array(5 - avaliacao.avaliacao).fill('☆').join('');
+                
+                elemento.innerHTML = `
+                    <div class="avaliacao-item">
+                        <strong>${avaliacao.nome}</strong>: ${avaliacao.comentario} 
+                        <div class="stars">Nota: ${stars}${emptyStars}</div>
+                    </div>`;
+                
+                container.appendChild(elemento);
+            });
+        });
+    </script>
+</body>
+
+</html>
